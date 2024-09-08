@@ -1,6 +1,6 @@
-# How to open CSGO server over internet without GSLT or fix for "LAN servers are restricted to local clients (class C)"
+# How to open CS:GO server over internet without GSLT or fix for "LAN servers are restricted to local clients (class C)"
 
-Currently confirmed to work on CSGO no Steam version 2018-01-10 (Windows version)
+Currently confirmed to work on CSGO no Steam version 2018-01-10 (Windows version). Using the same method, this probably can work on every version of Counter Strike.
 
 **WARNING:** I don't know if you can get VAC banned for using this, but **USE AS YOUR OWN RISK!!!**
 
@@ -14,6 +14,19 @@ Currently confirmed to work on CSGO no Steam version 2018-01-10 (Windows version
 - Send the patched DLL to your friend
 - Tell him to connect to your server using console and the command `connect`
 - Enjoy!
+
+## (For RevLoader) How to have skin in multiplayer?
+On server machine:
+- Open `rev.ini`
+- Change `SteamClient = true` to `SteamClient = false`
+- Change `#NSNetDedicatedPort = :PORT` to `NSNetDedicatedPort = 22015`
+- Expose port 22015 to the Internet
+
+On client machine:
+- Open `rev.ini`
+- Change `ServerIPNSNet = HOST:` to `ServerIPNSNet = [server's public IP]`
+
+Done! Player can now have their inventory items shown when connecting to server. 
 
 ## Details?
 Normally, you have two option for openning a multi-player CS:GO server: either LAN-only server (only people on the same LAN network as yours) or internet server (people outside your LAN can connect). But the internet server would require [Game Server Login Token](https://steamcommunity.com/dev/managegameservers) passed to its parameter, or else they will fallback to LAN server. This is implemented by Valve to restrict things like skin-modding or prohibited plugins, and Valve will regularly scan servers with the token and ban violated servers.
@@ -31,5 +44,7 @@ And if for some reasons you can't meet, you won't be able to get a token. For ex
 So, without the token, when you try to connect to the server from outside your LAN, you will get this:
 
 ![image](https://github.com/user-attachments/assets/64138fea-ebec-4a9c-b66b-a54157dda0f1)
+
+(Sorry I don't have image from CS:GO now, this is on CS1.6 but it will be the same message on CS:GO)
 
 (to be added soon)
