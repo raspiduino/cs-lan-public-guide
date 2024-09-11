@@ -1,6 +1,6 @@
 # How to open CS:GO server over internet without GSLT or fix for "LAN servers are restricted to local clients (class C)"
 
-Currently confirmed to work on CSGO no Steam version 2018-01-10 (Windows version). Using the same method, this probably can work on every version of Counter Strike.
+Currently confirmed to work on CSGO no Steam version 2018-01-10 (Windows version) and `csgo_legacy` from Steam. Using the same method, this probably can work on every version of Counter Strike.
 
 **WARNING:** I don't know if you can get VAC banned for using this, but **USE AS YOUR OWN RISK!!!**
 
