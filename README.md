@@ -20,7 +20,7 @@ On server machine:
 - Open `rev.ini`
 - Change `SteamClient = true` to `SteamClient = false`
 - Change `#NSNetDedicatedPort = :PORT` to `NSNetDedicatedPort = 22015`
-- Expose port 22015 to the Internet
+- Expose port 7534 and 22015 to the Internet
 
 On client machine:
 - Open `rev.ini`
